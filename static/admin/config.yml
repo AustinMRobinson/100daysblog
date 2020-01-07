@@ -11,6 +11,7 @@ collections:
     folder: src/pages/blog/
     create: true
     fields:
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: date, label: Date, widget: datetime }
+      - { name: "thumbnail", label: "Post Thumbnail", widget: image }
       - { name: body, label: Body, widget: markdown }
