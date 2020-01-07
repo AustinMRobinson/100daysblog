@@ -12,22 +12,30 @@ const Posts = styled.div`
     list-style-type: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1.5rem;
+    grid-gap: 10%;
 `
 
 const Post = styled(Link)`
-    padding: 0.5rem 1.5rem;
-    background: white;
     color: inherit;
     text-decoration: none;
     h3 {
         margin-bottom: 0.5rem;
+        font-size: 1.5rem;
     }
 `
 
-const Date = styled.p`
-    margin: 0;
+const Thumbnail = styled.img`
+    width: 100%;
+    border-radius: 0.5rem;
+`
+
+const Excerpt = styled.p`
     color: #737373;
+`
+
+const PostInfo = styled.p`
+    color: #adadad;
+    font-size: 0.9rem;
 `
 
 const IndexPage = ({ data }) => {
@@ -39,11 +47,10 @@ const IndexPage = ({ data }) => {
                 <Posts>
                     {data.allMarkdownRemark.edges.map(({ node }) => (
                         <Post to={node.fields.slug} key={node.id}>
-                            <img src={node.frontmatter.thumbnail}></img>
+                            <Thumbnail src={node.frontmatter.thumbnail}></Thumbnail>
                             <h3>{node.frontmatter.title}</h3>
-                            <Date>{node.frontmatter.date}</Date>
-                            <p>{node.timeToRead} min read</p>
-                            <p>{node.excerpt}</p>
+                            <Excerpt>{node.excerpt}</Excerpt>
+                            <PostInfo>{node.frontmatter.date} • {node.timeToRead} min read</PostInfo>
                         </Post>
                     ))}
                 </Posts>
