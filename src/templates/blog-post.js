@@ -16,8 +16,10 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        thumbnail
         date(formatString: "MMMM DD, YYYY")
       }
+      timeToRead
       html
       excerpt
     }

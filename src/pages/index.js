@@ -39,8 +39,10 @@ const IndexPage = ({ data }) => {
                 <Posts>
                     {data.allMarkdownRemark.edges.map(({ node }) => (
                         <Post to={node.fields.slug} key={node.id}>
+                            <img src={node.frontmatter.thumbnail}></img>
                             <h3>{node.frontmatter.title}</h3>
                             <Date>{node.frontmatter.date}</Date>
+                            <p>{node.timeToRead} min read</p>
                             <p>{node.excerpt}</p>
                         </Post>
                     ))}
@@ -62,10 +64,12 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
+            thumbnail
           }
           fields {
             slug
           }
+          timeToRead
           excerpt
         }
       }

@@ -2,8 +2,8 @@ backend:
   name: github
   repo: AustinMRobinson/100daysblog
 
-media_folder: src/images
-public_folder: assets
+media_folder: src/images/
+public_folder: src/images/
 
 collections:
   - name: blog
