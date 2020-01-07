@@ -21,6 +21,13 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/pages/blog`,
+        name: 'markdown-pages',
+      },
+    }
     `gatsby-plugin-emotion`,
     `gatsby-plugin-offline`,
     {
