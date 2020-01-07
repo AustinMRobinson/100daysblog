@@ -17,17 +17,10 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/pages/blog`,
+        path: `${__dirname}/src/pages/blog/`,
         name: 'markdown-pages',
       },
-    }
+    },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-offline`,
     {

@@ -2,13 +2,13 @@ backend:
   name: github
   repo: AustinMRobinson/100daysblog
 
-media_folder: static/assets
+media_folder: src/images
 public_folder: assets
 
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: src/pages/blog
     create: true
     fields:
       - { name: path, label: Path }
