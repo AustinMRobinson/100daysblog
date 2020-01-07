@@ -1,7 +1,7 @@
 ---
 title: Sweet Pandas Eating Sweets
 date: '2017-08-10'
-thumbnail: /assets/5ca6dfdb0adf05a99bea8435_football-selects-16.jpg
+thumbnail: /img/5cd7347f2ed4df20e074b2b5_dsc08370.jpg
 ---
 
 Pandas are really sweet.
