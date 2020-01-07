@@ -12,6 +12,8 @@ module.exports = {
     description: `A blog detailing my experiences building in the 100 Days of Gatsby Challenge!`
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
     {
