@@ -7,11 +7,34 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `100 Days of Gatsby`,
+    title: `#100DaysofGatsby`,
     author: `Austin Robinson`,
-    description: `A blog detailing my experiences building in the 100 Days of Gatsby Challenge!`
+    description: `A blog detailing my experiences building in the 100 Days of Gatsby Challenge!`,
+    avatar: `/img/profpic.JPG`
   },
   plugins: [
+    `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+          options: {
+              path: `${__dirname}/static/img`,
+              name: 'images',
+          },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+          plugins: [
+              {
+                  resolve: `gatsby-remark-images`,
+                  options: {
+                      maxWidth: 940,
+                  },
+              },
+          ],
+      },
+  },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify-cms`,
