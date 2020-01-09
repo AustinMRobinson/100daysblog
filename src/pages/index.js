@@ -56,8 +56,6 @@ const Post = styled(Link)`
         img {
             box-shadow: 12px 4px 48px var(--transparent2);
         }
-        p {
-        }
     }
 `
 

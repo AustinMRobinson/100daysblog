@@ -15,7 +15,7 @@ const BlogThumbnail = styled(Img)`
 const BlogContent = styled.section`
   margin-top: 5rem;
   img {
-    max-width: 640px;
+    max-width: 100%;
     border-radius: 8px;
     margin: 1rem 0;
     box-shadow: 0px 8px 28px var(--transparent0);
