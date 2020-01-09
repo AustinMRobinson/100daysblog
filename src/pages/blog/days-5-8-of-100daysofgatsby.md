@@ -1,5 +1,5 @@
 ---
-title: 'Days 5-8 of #100DaysofGatsby'
+title: Days 5-8 of 100 Days of Gatsby
 date: 2020-01-09T02:52:03.931Z
 thumbnail: /img/days5-8.jpg
 ---
