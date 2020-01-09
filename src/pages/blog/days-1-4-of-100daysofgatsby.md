@@ -11,15 +11,13 @@ Similar to fun daily challenges like [DailyUI](https://www.dailyui.co/), the tea
 
 An important thing to note is that I've been playing around with Gatsby for a couple weeks, so much of these first few days will be quite a bit of review for me. Despite that being the case, I am definitely not advanced enough to jump into their advanced recommendations like building a theme, plugin, or a more complex app. It also seems like the challenges will not be day-to-day, so much of these days will be self-imposed challenges.
 
-
-
 # Challenge #1
 
 ## Create a Gatsby Blog from Scratch
 
-> Why share all of your ideas with just Reddit and Twitter? Your best writing needs a home - on your very own blog!
+> "Why share all of your ideas with just Reddit and Twitter? Your best writing needs a home - on your very own blog!
 >
-> This week, let's get a Gatsby blog up-and-running from scratch. You'll get practice setting up your local environment, creating new pages from React components, sourcing content from Markdown files, and deploying your site to a host!
+> This week, let's get a Gatsby blog up-and-running from scratch. You'll get practice setting up your local environment, creating new pages from React components, sourcing content from Markdown files, and deploying your site to a host!"
 
 This seemed like a straightforward challenge to me, as I had done this work a couple of times already. Once when I set up a blog site following Andrew Mead's [Gatsby Bootcamp](https://www.youtube.com/watch?v=8t0vNu2fCCM&t=15125s), and another time when I rebuilt much of my personal website from scratch.
 
