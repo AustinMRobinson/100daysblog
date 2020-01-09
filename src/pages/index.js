@@ -16,6 +16,9 @@ const Posts = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 7%;
+    @media only screen and (max-width: 460px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 const Thumbnail = styled(Img)`
