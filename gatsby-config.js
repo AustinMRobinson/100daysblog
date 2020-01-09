@@ -5,7 +5,6 @@
  */
 
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     title: `#100DaysofGatsby`,
     author: `Austin Robinson`,
@@ -29,7 +28,7 @@ module.exports = {
               {
                   resolve: `gatsby-remark-images`,
                   options: {
-                      maxWidth: 940,
+                      maxWidth: 960,
                       linkImagesToOriginal: false // point!
                   },
               },

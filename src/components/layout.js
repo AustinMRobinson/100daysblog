@@ -31,6 +31,22 @@ const Layout = (props) => {
                         font-weight: 600;
                         letter-spacing: -0.5px;
                     }
+                    h1 {
+                        font-size: 2.5rem;
+                        margin: 3rem 0 1rem 0;
+                    }
+                    h2 {
+                        font-size: 1.75rem;
+                        margin: 2rem 0 0.5rem 0;
+                    }
+                    a {
+                        color: var(--accent);
+                        text-decoration: none;
+                        transition: 0.3s all ease-in-out;
+                        &:hover{
+                            color: var(--hoveraccent);
+                        }
+                    }
                 `}
             />
             <Header toggleTheme={toggleTheme}></Header>

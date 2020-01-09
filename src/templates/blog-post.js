@@ -9,8 +9,28 @@ import Img from 'gatsby-image'
 const BlogThumbnail = styled(Img)`
   width: 100%;
   border-radius: 1rem;
-  margin-bottom: 3rem;
-  box-shadow: 12px 0 40px rgba(0,0,0,0.05);
+  box-shadow: 0 12px 40px var(--transparent0);
+`
+
+const BlogContent = styled.section`
+  margin-top: 5rem;
+  img {
+    max-width: 640px;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0px 8px 28px var(--transparent0);
+  }
+  p {
+    color: var(--foreground1);
+    line-height: 150%;
+  }
+  code {
+    font-family: monospace;
+    color: var(--foreground0);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: var(--eventransparent);
+  }
 `
 
 const BlogPost = ({ props, data }) => {
@@ -21,9 +41,11 @@ const BlogPost = ({ props, data }) => {
             <Container>
               <BlogThumbnail fluid={post.frontmatter.thumbnail.childImageSharp.fluid} draggable="false"></BlogThumbnail>
             </Container>
-            <Container width="640px">
-              <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            </Container>
+            <BlogContent>
+              <Container width="640px">
+                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              </Container>
+            </BlogContent>
         </Layout>
     )
 }
