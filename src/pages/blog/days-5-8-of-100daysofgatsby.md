@@ -37,4 +37,4 @@ This one is pretty easy, and one of my favorite things about Gatsby. Optimizing 
 
 # Closing
 
-I was able to accomplish all of the things I wanted to for this set of days! Honestly, I already did a lot of the hard work for the blog, so now the challenge is to keep finding things to do to make this site better outside of the challenges given directly by the Gatsby team. My goals for the next set of days are: migrate all page copy to NetlifyCMS content, make a nice 'About' page, and to make a functioning contact form.
+I was able to accomplish all of the things I wanted to for this set of days! Honestly, I already did a lot of the hard work for the blog, so now the challenge is to keep finding things to do to make this site better outside of the challenges given directly by the Gatsby team. My goals for the next set of days are: make the site responsive, make a nice 'About' page, and to make a functioning contact form.
