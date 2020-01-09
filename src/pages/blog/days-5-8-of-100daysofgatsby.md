@@ -1,7 +1,7 @@
 ---
 title: 'Days 5-8 of #100DaysofGatsby'
 date: 2020-01-09T02:52:03.931Z
-thumbnail: /img/days5-8.jpg
+thumbnail: /img/screen-shot-2020-01-08-at-10.30.14-pm.png
 ---
 # Challenges
 
