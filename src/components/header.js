@@ -30,20 +30,19 @@ const NavMain = styled(Link)`
     }
 `
 
-const NavItems = styled.ul`
-    list-style-type: none;
+const NavItems = styled.div`
     margin: 0;
     padding: 0;
-    li {
-        display: inline-flex;
-        margin-left: 2rem;
-        a {
-            color: var(--foreground2);
-            transition: 0.3s all ease-in-out;
-            &:hover {
-                color: var(--foreground0);
-            }
-        }
+    display: flex;
+    align-items: center;
+`
+
+const NavLink = styled(Link)`
+    margin-right: 2rem;
+    color: var(--foreground2);
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        color: var(--foreground0);
     }
 `
 
@@ -66,9 +65,9 @@ const Header = (props) => {
                 <nav>
                     <NavMain to="/">{data.site.siteMetadata.title}</NavMain>
                     <NavItems>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/contact">Contact Me</Link></li>
-                        <li><ModeToggle></ModeToggle></li>
+                        <NavLink to="/about">About</NavLink>
+                        <NavLink to="/contact">Contact Me</NavLink>
+                        <ModeToggle></ModeToggle>
                     </NavItems>
                 </nav>
             </Container>

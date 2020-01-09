@@ -6,8 +6,8 @@ import Container from "../components/container"
 const StyledFooter = styled.footer`
     margin-top: 8rem;
     padding: 1.5rem 0 3rem 0;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    color: #737373;
+    border-top: 1px solid var(--eventransparent);
+    color: var(--foreground2);
 `
 
 const Footer = () => {
