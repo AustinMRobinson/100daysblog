@@ -15,7 +15,7 @@ These challenges were:
 
 ## NetlifyCMS
 
-On my previous explorations, I had either written all of my dynamic content directly in a markdown file or using Contentful as a CMS. Both of these solutions left me wanting more. Writing directly in markdown files was tough for me because I had never written in markdown before, and I also didn't want to have to bust open my code every time I wanted to write a blog post. With Contentful, I had a hard time being able to use some of the best Gatsby features (like gatsby-image). Contentful's content models (and the inability to group fields) left me wanting more as well. 
+On my previous explorations, I had either written all of my dynamic content directly in a markdown file or using Contentful as a CMS. Both of these solutions left me wanting more. Writing directly in markdown files was tough for me because I had never written in markdown before, and I also didn't want to have to bust open my code every time I wanted to write a blog post. With Contentful, I had a hard time being able to use some of the best Gatsby features (like gatsby-image). Contentful's content models (and the inability to group fields) also weren't my favorite. 
 
 Luckily, NetlifyCMS is a great option, and being able to define the content models directly in the code allows for more flexibility for me. This especially comes in handy when I want to do content models for something like my homepage. I will migrate the majority of the copy in my site to be controlled by NetlifyCMS, which will need flexibility. 
 
