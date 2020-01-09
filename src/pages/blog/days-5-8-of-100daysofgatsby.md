@@ -29,7 +29,7 @@ Luckily, I was able to implement this by using [gatsby-plugin-dark-mode](https:/
 
 Really one of my only issues with this was getting the `prefers-color-scheme` media query to work. The dark mode toggle went off without a hitch, but I couldn't seem to figure out what I needed for that query. Luckily, after digging into that Gatsby starter, I found a `gatsby-browser.js` file that imported the global stylesheet. And that was all there was to it! I imported the global CSS variables in the `layout.js` file and referenced them wherever I wanted. Test out switching your OS theme and watch the site respond accordingly!
 
-![A screenshot of dark mode on the website](/img/screen-shot-2020-01-08-at-9.55.33-pm.png "Dark Mode Screenshot")
+![A screenshot of dark mode on the website](/img/screen-shot-2020-01-08-at-10.30.14-pm.png "Dark Mode Screenshot")
 
 ## Gatsby-Image
 
