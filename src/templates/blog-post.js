@@ -31,6 +31,22 @@ const BlogContent = styled.section`
     border-radius: 4px;
     background: var(--eventransparent);
   }
+  blockquote {
+    margin: 1.5rem 1rem 1.5rem .5rem;
+    border-left: 3px solid var(--transparentaccent);
+    padding-left: 1.5rem;
+    p {
+      color: var(--accent);
+    }
+  }
+  a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: 0.3s all ease-in-out;
+      &:hover{
+          color: var(--hoveraccent);
+      }
+  }
   @media only screen and (max-width: 460px) {
     margin-top: 3rem;
   }

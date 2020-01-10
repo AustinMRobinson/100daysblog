@@ -39,14 +39,6 @@ const Layout = (props) => {
                         font-size: 1.75rem;
                         margin: 2rem 0 0.5rem 0;
                     }
-                    a {
-                        color: var(--accent);
-                        text-decoration: none;
-                        transition: 0.3s all ease-in-out;
-                        &:hover{
-                            color: var(--hoveraccent);
-                        }
-                    }
                 `}
             />
             <Header toggleTheme={toggleTheme}></Header>
