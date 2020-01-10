@@ -31,6 +31,9 @@ const BlogContent = styled.section`
     border-radius: 4px;
     background: var(--eventransparent);
   }
+  @media only screen and (max-width: 460px) {
+    margin-top: 3rem;
+  }
 `
 
 const BlogPost = ({ props, data }) => {

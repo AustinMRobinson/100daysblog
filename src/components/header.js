@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import { useOnClickOutside } from '../hooks.js';
 import styled from "@emotion/styled"
 import Container from '../components/container'
 import ModeToggle from './modetoggle';
+import Burger from '../components/burger.js';
+import Menu from '../components/menu.js';
 
 const StyledHeader = styled.header`
     padding: 4rem 0 0 0;
@@ -17,9 +20,17 @@ const StyledHeader = styled.header`
     a {
         text-decoration: none;
     }
+    @media (max-width: 768px) {
+        padding: 0;
+        nav {
+            padding: 1rem 0.5rem;
+        }
+    }
 `
 
 const NavMain = styled(Link)`
+    position: relative;
+    z-index: 10;
     font-size: 1.5rem;
     font-family: 'futura-pt';
     font-weight: 600;
@@ -44,6 +55,12 @@ const NavLink = styled(Link)`
     &:hover {
         color: var(--foreground0);
     }
+    @media (max-width: 768px) {
+        display: none;
+    }
+`
+
+const NavMenu = styled.div`
 `
 
 const Header = (props) => {
@@ -59,15 +76,24 @@ const Header = (props) => {
         }
     `)
     
+    const [open, setOpen] = useState(false);
+    const node = useRef(); 
+    useOnClickOutside(node, () => setOpen(false));
+
     return (
         <StyledHeader>
             <Container>
                 <nav>
                     <NavMain to="/">{data.site.siteMetadata.title}</NavMain>
                     <NavItems>
+                        <NavLink to="/">Blog</NavLink>
                         <NavLink to="/about">About</NavLink>
                         <NavLink to="/contact">Contact Me</NavLink>
                         <ModeToggle></ModeToggle>
+                        <NavMenu ref={node}>
+                            <Burger open={open} setOpen={setOpen} />
+                            <Menu open={open} setOpen={setOpen} />
+                        </NavMenu>
                     </NavItems>
                 </nav>
             </Container>

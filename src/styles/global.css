@@ -17,6 +17,7 @@ body {
     --transparent1: rgba(0,0,0,0.15);
     --transparent2: rgba(0,0,0,0.2);
     --eventransparent: rgba(0,0,0,0.05);
+    --evenlesstransparent: rgba(255,255,255,0.3);
 }
   
 body.dark {
@@ -38,4 +39,5 @@ body.dark {
     --transparent1: rgba(0,0,0,0.4);
     --transparent2: rgba(0,0,0,0.5);
     --eventransparent: rgba(255,255,255,0.05);
+    --evenlesstransparent: rgba(0,0,0,0.3);
 }

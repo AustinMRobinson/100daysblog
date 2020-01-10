@@ -21,6 +21,8 @@ const Toggle = styled.button`
   padding: 0.625rem;
   width: 2.5rem;
   height: 2.5rem;
+  position: relative;
+  z-index: 10;
   &:hover {
     background: var(--eventransparent);
     ${ToggleIcon} {

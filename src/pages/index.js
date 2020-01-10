@@ -8,6 +8,9 @@ import Img from 'gatsby-image'
 
 const BlogPosts = styled.div`
     padding: 2rem 0 1rem 0;
+    @media only screen and (max-width: 460px) {
+        padding-top: 1rem;
+    }
 `
 
 const Posts = styled.div`
@@ -18,6 +21,7 @@ const Posts = styled.div`
     grid-gap: 7%;
     @media only screen and (max-width: 460px) {
         grid-template-columns: 1fr;
+        grid-gap: 4rem;
     }
 `
 
@@ -29,13 +33,16 @@ const Thumbnail = styled(Img)`
 `
 
 const Excerpt = styled.p`
-    color: var(--foreground2);
+    color: var(--foreground1);
     transition: 0.3s all ease-in-out;
     margin: 0.5rem 0 2rem 0;
+    @media only screen and (max-width: 768px) {
+        margin-bottom: 1rem;
+    }
 `
 
 const PostInfo = styled.p`
-    color: var(--foreground3);
+    color: var(--foreground2);
     font-size: 0.9rem;
     transition: 0.3s all ease-in-out;
     margin-bottom: 0;
@@ -46,8 +53,9 @@ const Post = styled(Link)`
     text-decoration: none;
     h3 {
         transition: 0.3s all ease-in-out;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
         font-size: 2rem;
+        line-height: 2.125rem;
     }
     &:hover {
         h3 {
