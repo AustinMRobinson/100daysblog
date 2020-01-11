@@ -12,6 +12,7 @@ const Content = styled.div`
 `   
 
 const Layout = (props) => {
+
     return (
         <ThemeToggler>
         {({ toggleTheme }) => (
@@ -42,7 +43,7 @@ const Layout = (props) => {
                 `}
             />
             <Header toggleTheme={toggleTheme}></Header>
-            <SEO title={props.title} description={props.description}></SEO>
+            <SEO title={props.title} description={props.description} image={props.image}></SEO>
             <main>
                 <Content>
                     {props.children}

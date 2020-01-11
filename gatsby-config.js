@@ -9,7 +9,8 @@ module.exports = {
     title: `#100DaysofGatsby`,
     author: `Austin Robinson`,
     description: `A blog detailing my experiences building in the 100 Days of Gatsby Challenge!`,
-    avatar: `/img/profpic.JPG`
+    avatar: `/img/profpic.JPG`,
+    image: "/img/SiteThumb.jpg",
   },
   plugins: [
     `gatsby-plugin-dark-mode`,
