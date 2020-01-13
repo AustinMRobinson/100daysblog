@@ -24,7 +24,7 @@ function _extends() {
 const FloatingLabelInput = styled.div`
   width: 100%;
   display: block;
-  margin: -1.5rem 0 3rem 0;
+  margin: 1rem 0 2rem 0;
 `;
 const FloatingLabelInputContainer = styled.div`
   display: flex;
