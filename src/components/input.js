@@ -2,10 +2,16 @@ import FloatingLabelInput from 'react-floating-label-input';
 import styled from '@emotion/styled'
 
 const Input = styled(FloatingLabelInput)`
-    padding: 12px;
-    border-radius: 8px;
     border: none;
-    height: auto;
+    label {
+        padding: 16px;
+    }
+    input {
+        line-height: 24px;
+        &:focus {
+            box-shadow: inset 0 0 0 2px var(--accent);
+        }
+    }
 `
 
 export default Input
