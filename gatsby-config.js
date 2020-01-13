@@ -54,6 +54,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-styled-components`, // for Floating Label Input
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
