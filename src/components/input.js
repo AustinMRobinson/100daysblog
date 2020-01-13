@@ -32,7 +32,7 @@ const FloatingLabelInputContainer = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  height: 2em;
+  height: auto;
   border: none;
   font-size: inherit;
 `;
