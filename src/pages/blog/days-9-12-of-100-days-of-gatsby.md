@@ -17,7 +17,7 @@ The big win here was implementing a hamburger menu! It's dead simple and I love 
 
 # Contact Form
 
-I was able to get the contact form up and running with virtually no issues. It's dead simple with Netlify forms & Gatsby. Any questions I had were answered by [this](https://codebushi.com/form-handling-gatsby-netlify/) blog post. It seems like a normal form with just a few special affordances to connect to Netlify: `data-netlify-honeypot` and "`hidden"` attributes for a couple inputs.
+I was able to get the contact form up and running with virtually no issues. It's pretty simple with Netlify forms & Gatsby. Any questions I had were answered by [this](https://codebushi.com/form-handling-gatsby-netlify/) blog post. It seems like a normal form with just a few special affordances to connect to Netlify: `data-netlify-honeypot` and "`hidden"` attributes for a couple inputs.
 
 The one thing that I personally wanted to nail was a floating label for each form input field. I leveraged `react-floating-label-input`, which was a great starting point that I was able to style on top of. I also adapted it to create a floating label text area as well. 
 
