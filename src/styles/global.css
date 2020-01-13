@@ -15,11 +15,14 @@ body {
     --transparentaccent: #cabeda;
 
     --success: #048a01;
+    --hoversuccess: #025b00;
+    --transparentsuccess: rgba(4,138,1,0.1);
 
     --transparent0: rgba(0,0,0,0.05);
     --transparent1: rgba(0,0,0,0.15);
     --transparent2: rgba(0,0,0,0.2);
     --eventransparent: rgba(0,0,0,0.05);
+    --eventransparent1: rgba(0,0,0,0.2);
     --evenlesstransparent: rgba(255,255,255,0.3);
 }
   
@@ -40,10 +43,13 @@ body.dark {
     --transparentaccent: #261b4b;
 
     --success: #59db57;
+    --hoversuccess: #89dd88;
+    --transparentsuccess: rgba(89,219,87,0.1);
 
     --transparent0: rgba(0,0,0,0.25);
     --transparent1: rgba(0,0,0,0.4);
     --transparent2: rgba(0,0,0,0.5);
     --eventransparent: rgba(255,255,255,0.05);
+    --eventransparent1: rgba(255,255,255,0.2);
     --evenlesstransparent: rgba(0,0,0,0.3);
 }
