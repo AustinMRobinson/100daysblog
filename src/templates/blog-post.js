@@ -31,6 +31,13 @@ const BlogContent = styled.section`
     border-radius: 4px;
     background: var(--eventransparent);
   }
+  pre code {
+    background: var(--foreground0);
+    color: var(--bg);
+    border-radius: 4px;
+    width: 100%;
+    overflow: scroll;
+  }
   blockquote {
     margin: 1.5rem 1rem 1.5rem .5rem;
     border-left: 3px solid var(--transparentaccent);
