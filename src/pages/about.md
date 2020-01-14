@@ -2,6 +2,7 @@
 title: about
 metaimage: /img/bioimage.jpg
 heading: 'Hi, I''m Austin'
+subheading: A little bit about me
 bioimage: /img/bioimage.jpg
 bio: >-
   I am a 24 year old dude who loves creating things. As cliche as that is, it is
@@ -16,5 +17,6 @@ bio: >-
   still in search of the perfect chocolate shake and I regularly rant about how
   The Lord of the Rings (book and film) series is the greatest creative work of
   all time.
+location: 'Houston, TX'
 ---
 
