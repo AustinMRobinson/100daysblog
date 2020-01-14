@@ -6,26 +6,26 @@ media_folder: "static/img"
 public_folder: "/img"
 
 collections:
-  - name: blog
-    label: Blog
-    folder: src/pages/blog/
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog/"
     create: true
     fields:
-      - { name: title, label: Title }
+      - { name: "title", label: "Title", widget: string }
       - { name: date, label: Date, widget: datetime }
-      - { name: "thumbnail", label: "Post Thumbnail", widget: image }
+      - { name: thumbnail, label: Post Thumbnail, widget: image }
       - { name: body, label: Body, widget: markdown }
-  - name: pages
-    label: Pages
+  - name: "pages"
+    label: "Pages"
     files:
-      - file: src/pages/about/index.md
-      - label: About
-      - name: about
+      - file: "src/pages/about/index.md"
+      - label: "About"
+      - name: "about"
         fields: 
-          - { name: title, label: Title }
-          - { name: "metaimage", label: "Meta Image", widget: image }
-          - { name: "heading", label: "Heading" }
-          - { name: "subheading", label: "Subheading" }
-          - { name: "bioimage", label: "Bio Image", widget: image }
+          - { name: "title", label: "Title", widget: string }
+          - { name: metaimage, label: Meta Image, widget: image }
+          - { name: heading, label: Heading, widget: string }
+          - { name: subheading, label: Subheading, widget: string }
+          - { name: bioimage, label: Bio Image, widget: image }
           - { name: bio, label: Bio, widget: markdown }
-          - { name: "location", label: "Location" }
+          - { name: location, label: Location, widget: string }
