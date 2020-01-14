@@ -18,12 +18,23 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/index.md"
+        label: "Homepage"
+        name: "index"
+        create: true
+        fields: 
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page" }
+          - { name: title", label: Title, widget: string }
+          - { name: metaimage, label: Meta Image, widget: image }
+          - { name: heading, label: Heading, widget: string }
+          - { name: subheading, label: Subheading, widget: string }
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
         create: true
         fields: 
-          - { name: "title", label: "Title", widget: string }
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page" }
+          - { name: title", label: Title, widget: string }
           - { name: metaimage, label: Meta Image, widget: image }
           - { name: heading, label: Heading, widget: string }
           - { name: subheading, label: Subheading, widget: string }
