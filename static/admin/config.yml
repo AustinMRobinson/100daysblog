@@ -23,5 +23,7 @@ collections:
       - { name: title, label: Title }
       - { name: "metaimage", label: "Meta Image", widget: image }
       - { name: "heading", label: "Heading" }
+      - { name: "subheading", label: "Subheading" }
       - { name: "bioimage", label: "Bio Image", widget: image }
       - { name: bio, label: Bio, widget: markdown }
+      - { name: "location", label: "Location" }
