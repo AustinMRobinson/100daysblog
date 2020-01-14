@@ -15,15 +15,18 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: "thumbnail", label: "Post Thumbnail", widget: image }
       - { name: body, label: Body, widget: markdown }
-  - name: about
-    label: About
-    folder: src/pages/
+  - name: pages
+    label: Pages
     create: true
     fields:
-      - { name: title, label: Title }
-      - { name: "metaimage", label: "Meta Image", widget: image }
-      - { name: "heading", label: "Heading" }
-      - { name: "subheading", label: "Subheading" }
-      - { name: "bioimage", label: "Bio Image", widget: image }
-      - { name: bio, label: Bio, widget: markdown }
-      - { name: "location", label: "Location" }
+      - file: src/pages/about/index.md
+      - label: About
+      - name: about
+        fields: 
+          - { name: title, label: Title }
+          - { name: "metaimage", label: "Meta Image", widget: image }
+          - { name: "heading", label: "Heading" }
+          - { name: "subheading", label: "Subheading" }
+          - { name: "bioimage", label: "Bio Image", widget: image }
+          - { name: bio, label: Bio, widget: markdown }
+          - { name: "location", label: "Location" }
