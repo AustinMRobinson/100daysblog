@@ -69,11 +69,10 @@ const Post = styled(Link)`
 
 
 const IndexPage = ({ data }) => {
-    console.log(data)
 
     return (
         <Layout title="Hello World!" description="A 100 Days of Gatsby Blog" image={data.site.siteMetadata.image}>
-            <Hero title="Hello World!" subtitle="This is my barebones #100DaysofGatsby Blog!"/>
+            <Hero title="Hello World!" subtitle="This is a barebones #100DaysofGatsby blog created by Austin Robinson."/>
             <Container>
                 <BlogPosts>
                     <Posts>
@@ -101,7 +100,10 @@ export const query = graphql`
             image
         }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
       totalCount
       edges {
         node {

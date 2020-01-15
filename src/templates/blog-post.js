@@ -59,8 +59,10 @@ const BlogContent = styled.section`
   }
 `
 
-const BlogPost = ({ props, data }) => {
-    const post = data.markdownRemark
+const BlogPost = ({ data }) => {
+
+    const { markdownRemark: post } = data
+    
     return (
         <Layout title={post.frontmatter.title} description={post.excerpt}>
             <Hero title={post.frontmatter.title} subtitle={`${post.frontmatter.date} • ${post.timeToRead} min read`} width="640px"></Hero>

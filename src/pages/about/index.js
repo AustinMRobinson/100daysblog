@@ -1,9 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import Container from '../components/container'
+import Layout from '../../components/layout'
+import Hero from '../../components/hero'
+import Container from '../../components/container'
 import Img from 'gatsby-image'
 
 const Intro = styled.div`
@@ -75,7 +75,6 @@ const ImageWrapper = styled.div`
     @media (max-width: 768px) {
         margin-top: -144px;
     }
-
 `
 
 const Location = styled.div`
@@ -89,7 +88,7 @@ const Location = styled.div`
     justify-content: center;
     padding: 1rem 1.5rem;
     color: var(--foreground0);
-    background: var(--eventransparent);
+    background: var(--transparent);
     backdrop-filter: saturate(180%) blur(5px);
     p {
         margin-bottom: 0;
@@ -130,6 +129,28 @@ const Place = styled.p`
 
 const AboutPage = () => {
 
+    const data = useStaticQuery(graphql`
+    query AboutPage {
+        markdownRemark(frontmatter: {templateKey: {eq: "about-page"}}) {
+          frontmatter {
+            title
+            heading
+            subheading
+            bioimage {
+              childImageSharp {
+                fixed(height: 550, quality: 100) {
+                    ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            location
+            bio
+          }
+        }
+      }
+      
+    `)
+
     return (
         <Layout title="About Me">
             <Hero title="About Me" subtitle="Learn a bit more about me"/>
@@ -137,17 +158,17 @@ const AboutPage = () => {
                 <Intro>
                     <LeftCol>
                         <ImageWrapper>
-                            <Img alt="Austin smiling with his hands in his pocket" objectFit="cover" objectPosition="50% 50%"></Img>
+                            <Img fixed={data.markdownRemark.frontmatter.bioimage.childImageSharp.fixed} alt="Austin smiling with his hands in his pocket" objectFit="cover" objectPosition="50% 50%"></Img>
                         </ImageWrapper>
                         <Location>
                             <Label>Location</Label>
-                            <Place></Place>
+                            <Place>{data.markdownRemark.frontmatter.location}</Place>
                         </Location>
                     </LeftCol>
                     <RightCol>
-                        <h1></h1>
-                        <BlurbTitle></BlurbTitle>
-                        <Blurb></Blurb>
+                        <h1>{data.markdownRemark.frontmatter.heading}</h1>
+                        <BlurbTitle>{data.markdownRemark.frontmatter.subheading}</BlurbTitle>
+                        <Blurb>{data.markdownRemark.frontmatter.bio}</Blurb>
                     </RightCol>
                 </Intro>
             </Container>

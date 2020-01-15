@@ -23,6 +23,13 @@ module.exports = {
           },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+          options: {
+            path: `${__dirname}/src/pages`,
+            name: 'pages',
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
           plugins: [
@@ -50,7 +57,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages/blog/`,
-        name: 'markdown-pages',
+        name: 'blog-posts',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
       },
     },
     `gatsby-plugin-emotion`,

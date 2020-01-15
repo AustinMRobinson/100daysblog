@@ -1,5 +1,6 @@
 ---
-title": about
+templateKey: about-page
+title: about
 metaimage: /img/bioimage.jpg
 heading: 'Hi, I''m Austin'
 subheading: A little bit about me
