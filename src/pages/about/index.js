@@ -2,15 +2,16 @@ import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import Layout from '../../components/layout'
-import Hero from '../../components/hero'
 import Container from '../../components/container'
 import Img from 'gatsby-image'
 
 const Intro = styled.div`
+    padding: 2rem 0;
     display: flex;
     justify-content: space-between;
     @media (max-width: 768px) {
-        flex-wrap: wrap;
+        padding: 0;
+        display: block;
         margin-top: -3rem;
     }
 `
@@ -24,7 +25,7 @@ const BlurbTitle = styled.p`
     margin: 2rem 0 .75rem 0;
 `
 
-const Blurb = styled.div`
+const Blurb = styled.p`
     color: var(--foreground2);
 `
 
@@ -35,9 +36,10 @@ const LeftCol = styled.div`
     max-height: 640px;
     overflow: hidden;
     @media (max-width: 768px) {
-        margin-left: -1.5rem;
-        flex: 1 0 100%;
+        z-index: -1;
+        display: block;
         max-height: 360px;
+        margin: 0 -1.5rem;
     }
     @media (max-width: 460px) {
         max-height: 240px;
@@ -45,23 +47,23 @@ const LeftCol = styled.div`
 `
 
 const RightCol = styled.div`
-    padding: 1rem 2rem;
-    flex: 0 0 46%;
+    padding: 1rem;
+    flex: 0 0 43%;
     h1 {
         margin-top: 0.5rem;
         font-size: 4rem;
     }
     @media (max-width: 768px) {
-        flex: 1 0 100%;
+        display: block;
         padding: 0 3rem;
         margin-top: -2rem;
-        z-index: 2;
+        z-index: 3;
         h1 {
             font-size: 3.5rem;
         }
     }
     @media (max-width: 768px) {
-        padding: 0 2rem;
+        padding: 0 1rem;
         h1 {
             font-size: 3rem;
         }
@@ -69,12 +71,12 @@ const RightCol = styled.div`
 `
 
 const ImageWrapper = styled.div`
+    border-radius: 12px;
     display: flex;
     align-content: center;
     justify-content: center;
     overflow: hidden;
     position: relative;
-    z-index: 1;
     @media (max-width: 768px) {
         margin-top: -144px;
     }
