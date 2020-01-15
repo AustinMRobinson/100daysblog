@@ -32,11 +32,10 @@ const LeftCol = styled.div`
     flex: 0 0 47%;
     position: relative;
     align-self: top;
-    max-height: 680px;
+    max-height: 640px;
     overflow: hidden;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
     @media (max-width: 768px) {
+        margin-left: -1.5rem;
         flex: 1 0 100%;
         max-height: 360px;
     }
@@ -46,8 +45,12 @@ const LeftCol = styled.div`
 `
 
 const RightCol = styled.div`
-    padding: 2.5rem 1.5rem;
+    padding: 1rem 2rem;
     flex: 0 0 46%;
+    h1 {
+        margin-top: 0.5rem;
+        font-size: 4rem;
+    }
     @media (max-width: 768px) {
         flex: 1 0 100%;
         padding: 0 3rem;
@@ -58,7 +61,7 @@ const RightCol = styled.div`
         }
     }
     @media (max-width: 768px) {
-        padding: 0;
+        padding: 0 2rem;
         h1 {
             font-size: 3rem;
         }
@@ -153,25 +156,26 @@ const AboutPage = () => {
 
     return (
         <Layout title="About Me">
-            <Hero title="About Me" subtitle="Learn a bit more about me"/>
-            <Container>
-                <Intro>
-                    <LeftCol>
-                        <ImageWrapper>
-                            <Img fixed={data.markdownRemark.frontmatter.bioimage.childImageSharp.fixed} alt="Austin smiling with his hands in his pocket" objectFit="cover" objectPosition="50% 50%"></Img>
-                        </ImageWrapper>
-                        <Location>
-                            <Label>Location</Label>
-                            <Place>{data.markdownRemark.frontmatter.location}</Place>
-                        </Location>
-                    </LeftCol>
-                    <RightCol>
-                        <h1>{data.markdownRemark.frontmatter.heading}</h1>
-                        <BlurbTitle>{data.markdownRemark.frontmatter.subheading}</BlurbTitle>
-                        <Blurb>{data.markdownRemark.frontmatter.bio}</Blurb>
-                    </RightCol>
-                </Intro>
-            </Container>
+            <section>
+                <Container>
+                    <Intro>
+                        <LeftCol>
+                            <ImageWrapper>
+                                <Img fixed={data.markdownRemark.frontmatter.bioimage.childImageSharp.fixed} alt="Austin smiling with his hands in his pocket" objectFit="cover" objectPosition="50% 50%"></Img>
+                            </ImageWrapper>
+                            <Location>
+                                <Label>Location</Label>
+                                <Place>{data.markdownRemark.frontmatter.location}</Place>
+                            </Location>
+                        </LeftCol>
+                        <RightCol>
+                            <h1>{data.markdownRemark.frontmatter.heading}</h1>
+                            <BlurbTitle>{data.markdownRemark.frontmatter.subheading}</BlurbTitle>
+                            <Blurb>{data.markdownRemark.frontmatter.bio}</Blurb>
+                        </RightCol>
+                    </Intro>
+                </Container>
+            </section>
         </Layout>
     )
 }
