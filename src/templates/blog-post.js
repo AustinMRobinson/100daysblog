@@ -82,7 +82,7 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(
       fields: { slug: { eq: $slug } }
-      frontmatter: {templateKey: {eq: "blog-post"}}
+      frontmatter: {templateKey: {eq: "blog-post"} }
     ) {
       frontmatter {
         templateKey

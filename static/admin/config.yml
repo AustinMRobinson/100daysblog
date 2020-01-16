@@ -2,6 +2,8 @@ backend:
   name: github
   repo: AustinMRobinson/100daysblog
 
+publish_mode: editorial_workflow
+
 media_folder: "static/img"
 public_folder: "/img"
 
