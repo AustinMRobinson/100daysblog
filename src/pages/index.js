@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import Hero from "../components/hero"
 import Container from '../components/container'
 import Img from 'gatsby-image'
+import SEO from "../components/seo"
 
 const BlogPosts = styled.div`
     padding: 2rem 0 1rem 0;
@@ -71,7 +72,8 @@ const Post = styled(Link)`
 const IndexPage = ({ data }) => {
 
     return (
-        <Layout title="Hello World!" description="A 100 Days of Gatsby Blog">
+        <Layout>
+            <SEO title="Hello World!" description="A 100 Days of Gatsby Blog"></SEO>
             <Hero title="Hello World!" subtitle="This is a barebones #100DaysofGatsby blog created by Austin Robinson."/>
             <Container>
                 <BlogPosts>

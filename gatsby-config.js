@@ -11,8 +11,8 @@ module.exports = {
     author: `Austin Robinson`,
     description: `A blog detailing my experiences building in the 100 Days of Gatsby Challenge!`,
     url: `https://admiring-galileo-482876.netlify.com`,
-    avatar: `img/profpic.jpg`,
-    image: "img/sitethumb.jpg",
+    avatar: `/static/img/profpic.jpg`,
+    image: `/static/img/sitethumb.jpg`,
   },
   plugins: [
     `gatsby-plugin-dark-mode`,

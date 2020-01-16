@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/header'
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
-import SEO from "../components/seo"
+// import SEO from "../components/seo"
 import Footer from "../components/footer"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import "../styles/global.css"
@@ -43,7 +43,7 @@ const Layout = (props) => {
                 `}
             />
             <Header toggleTheme={toggleTheme}></Header>
-            <SEO title={props.title} description={props.description}></SEO>
+            {/* <SEO title={props.title} description={props.description}></SEO> */}
             <main>
                 <Content>
                     {props.children}
