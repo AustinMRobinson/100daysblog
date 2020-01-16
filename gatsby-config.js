@@ -10,7 +10,7 @@ module.exports = {
     titleTemplate: "%s · 100 Days of Gatsby",
     author: `Austin Robinson`,
     description: `A blog detailing my experiences building in the 100 Days of Gatsby Challenge!`,
-    url: `https://admiring-galileo-482876.netlify.com`,
+    url: `https://100-days-of-gatsby.netlify.com/`,
     avatar: `/static/img/profpic.jpg`,
     image: `/static/img/sitethumb.jpg`,
   },
