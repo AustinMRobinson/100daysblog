@@ -7,9 +7,11 @@
 module.exports = {
   siteMetadata: {
     title: `#100DaysofGatsby`,
+    titleTemplate: "%s · 100 Days of Gatsby",
     author: `Austin Robinson`,
     description: `A blog detailing my experiences building in the 100 Days of Gatsby Challenge!`,
-    avatar: `static/img/profpic.JPG`,
+    url: `https://admiring-galileo-482876.netlify.com`,
+    avatar: `static/img/profpic.jpg`,
     image: "static/img/sitethumb.jpg",
   },
   plugins: [

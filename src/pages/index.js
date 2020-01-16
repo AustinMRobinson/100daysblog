@@ -71,7 +71,7 @@ const Post = styled(Link)`
 const IndexPage = ({ data }) => {
 
     return (
-        <Layout title="Hello World!" description="A 100 Days of Gatsby Blog" image={data.site.siteMetadata.image}>
+        <Layout title="Hello World!" description="A 100 Days of Gatsby Blog">
             <Hero title="Hello World!" subtitle="This is a barebones #100DaysofGatsby blog created by Austin Robinson."/>
             <Container>
                 <BlogPosts>
