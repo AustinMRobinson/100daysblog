@@ -13,15 +13,14 @@ const SEO = ({ title, description, image, pathname, article, lang }) => (
           titleTemplate,
           defaultDescription,
           siteUrl,
-          defaultImage,
-          twitterUsername,
+          image,
         },
       },
     }) => {
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        image: `${siteUrl}${image || defaultImage}`,
+        image: `${siteUrl}${image || image}`,
         url: `${siteUrl}${pathname || "/"}`,
       }
 
@@ -40,9 +39,6 @@ const SEO = ({ title, description, image, pathname, article, lang }) => (
             )}
             {seo.image && <meta property="og:image" content={seo.image} />}
             <meta name="twitter:card" content="summary_large_image" />
-            {twitterUsername && (
-              <meta name="twitter:creator" content={twitterUsername} />
-            )}
             {seo.title && <meta name="twitter:title" content={seo.title} />}
             {seo.description && (
               <meta name="twitter:description" content={seo.description} />
@@ -83,7 +79,7 @@ const query = graphql`
         titleTemplate
         defaultDescription: description
         siteUrl: url
-        defaultImage: image
+        image
       }
     }
   }

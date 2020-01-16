@@ -43,7 +43,7 @@ const Layout = (props) => {
                 `}
             />
             <Header toggleTheme={toggleTheme}></Header>
-            <SEO title={props.title} description={props.description} image={props.image}></SEO>
+            <SEO title={props.title} description={props.description}></SEO>
             <main>
                 <Content>
                     {props.children}
