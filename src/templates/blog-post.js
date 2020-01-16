@@ -80,8 +80,12 @@ const BlogPost = ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(
+      fields: { slug: { eq: $slug } }
+      frontmatter: {templateKey: {eq: "blog-post"}}
+    ) {
       frontmatter {
+        templateKey
         title
         date(formatString: "MMMM DD, YYYY")
         thumbnail {

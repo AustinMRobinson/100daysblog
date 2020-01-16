@@ -78,7 +78,7 @@ const ImageWrapper = styled.div`
     overflow: hidden;
     position: relative;
     @media (max-width: 768px) {
-        margin-top: -144px;
+        margin-top: -72px;
     }
 `
 
@@ -89,16 +89,13 @@ const Location = styled.div`
     right: 1.5rem;
     z-index: 2;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     padding: 1rem 1.5rem;
-    color: var(--foreground0);
-    background: var(--transparent);
+    border-radius: 0.5rem;
+    color: var(--bg);
+    background: var(--eventransparent2);
     backdrop-filter: saturate(180%) blur(5px);
-    p {
-        margin-bottom: 0;
-        text-shadow: 0 4px 8px var(--bg);
-    }
     @media (max-width: 768px) {
         height: 8rem;
         bottom: 0;
@@ -117,16 +114,16 @@ const Location = styled.div`
 `
 
 const Label = styled.p`
-    margin-top: 1px;
     font-size: .7rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'Archivo';
     font-weight: 700;
-    margin-right: .5rem;
+    margin: 1px 0.5rem 0 0;
 `
 
 const Place = styled.p`
+    margin: 0;
     font-size: 1rem;
     font-weight: 500;
 `
