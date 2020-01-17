@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Days 13-16 of 100 Days of Gatsby
 date: 2020-01-17T02:40:12.885Z
-thumbnail: /img/days9-12.jpg
+thumbnail: /img/days13-16.jpg
 ---
 # Intro
 
