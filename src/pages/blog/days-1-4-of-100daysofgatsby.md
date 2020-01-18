@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Days 1-4 of 100 Days of Gatsby
 date: 2020-01-05T01:50:46.800Z
 tags:
-  - gatsby
+  - Gatsby
 thumbnail: /img/days1-4.jpg
 ---
 # What is 100 Days of Gatsby?
