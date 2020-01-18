@@ -2,6 +2,10 @@
 templateKey: blog-post
 title: Days 9-12 of 100 Days of Gatsby
 date: 2020-01-13T04:43:53.146Z
+tags:
+  - Gatsby
+  - Responsive
+  - Floating Label Field
 thumbnail: /img/days9-12.jpg
 ---
 ### Warning: This is a lame set of updates
