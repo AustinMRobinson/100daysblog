@@ -2,6 +2,11 @@
 templateKey: blog-post
 title: Days 5-8 of 100 Days of Gatsby
 date: 2020-01-09T02:52:03.931Z
+tags:
+  - Gatsby
+  - NetlifyCMS
+  - Dark Mode
+  - gatsby-image
 thumbnail: /img/days5-8.jpg
 ---
 # Challenges
