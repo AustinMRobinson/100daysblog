@@ -14,6 +14,7 @@ body {
     --hoveraccent: #322362;
     --transparentaccent: #cabeda;
     --transparentaccent1: rgba(95, 57, 148,0.3);
+    --transparentaccent2: rgba(95, 57, 148,0.1);
 
     --success: #048a01;
     --hoversuccess: #025b00;
@@ -44,6 +45,7 @@ body.dark {
     --hoveraccent: #aa97c4;
     --transparentaccent: #261b4b;
     --transparentaccent1: rgba(147, 117, 189,0.3);
+    --transparentaccent2: rgba(147, 117, 189,0.1);
 
     --success: #59db57;
     --hoversuccess: #89dd88;

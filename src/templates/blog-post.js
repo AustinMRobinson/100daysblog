@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from '../components/layout'
 import styled from '@emotion/styled'
 import Container from '../components/container'
@@ -67,6 +67,9 @@ const BlogPost = ({ data }) => {
         <Layout title={post.frontmatter.title} description={post.excerpt}>
             <Hero title={post.frontmatter.title} subtitle={`${post.frontmatter.date} • ${post.timeToRead} min read`} width="640px"></Hero>
             <Container>
+                {post.frontmatter.tags.map(tag => (
+                <Link to={`/tags/${tag}/`}>{tag}</Link>
+                ))}
               <BlogThumbnail fluid={post.frontmatter.thumbnail.childImageSharp.fluid} draggable="false"></BlogThumbnail>
             </Container>
             <BlogContent>
@@ -88,6 +91,7 @@ export const query = graphql`
         templateKey
         title
         date(formatString: "MMMM DD, YYYY")
+        tags
         thumbnail {
           childImageSharp {
             fluid {

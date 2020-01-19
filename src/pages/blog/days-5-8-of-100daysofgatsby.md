@@ -7,6 +7,8 @@ tags:
   - NetlifyCMS
   - Dark Mode
   - gatsby-image
+  - Emotion
+# tags: ["animals", "Chicago", "zoos"]
 thumbnail: /img/days5-8.jpg
 ---
 # Challenges

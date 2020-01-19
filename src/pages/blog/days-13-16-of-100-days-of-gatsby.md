@@ -6,6 +6,7 @@ tags:
   - Gatsby
   - NetlifyCMS
   - Open Graph
+# tags: ["animals", "Chicago"]
 thumbnail: /img/days13-16.jpg
 ---
 # Intro

@@ -5,7 +5,7 @@ const Button = styled.button`
     outline: none;
     font-size: 1rem;
     font-weight: 600;
-    padding: 12px 24px;
+    padding: ${props => props.size === 'large' ? '16px 32px' : '12px 24px'};
     border-radius: 8px;
     cursor: pointer;
     background: ${props => props.variant === 'secondary' ? 'none' : 'var(--accent)'};

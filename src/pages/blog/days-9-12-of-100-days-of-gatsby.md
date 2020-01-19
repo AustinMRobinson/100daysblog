@@ -6,6 +6,7 @@ tags:
   - Gatsby
   - Responsive
   - Floating Label Field
+# tags: ["animals", "Chicago", "zoos"]
 thumbnail: /img/days9-12.jpg
 ---
 ### Warning: This is a lame set of updates
