@@ -71,10 +71,9 @@ const Tag = styled(Link)`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-align: center;
   font-size: 0.9rem;
   font-weight: 600;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border-radius: 8px;
   color: var(--foreground2);
   background: var(--eventransparent);

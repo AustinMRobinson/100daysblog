@@ -14,14 +14,6 @@ const Tags = styled.div`
 }
 `
 
-const Count = styled.p`
-  color: var(--foreground3);
-  border-left: 1px solid var(--eventransparent);
-  padding-left: 6px;
-  margin: 0 0 0 6px;
-  transition: 0.3s all ease-in-out;
-`
-
 const Tag = styled(Link)`
   white-space: nowrap;
   overflow: hidden;
@@ -31,7 +23,7 @@ const Tag = styled(Link)`
   align-items: center;
   font-size: 0.9rem;
   font-weight: 600;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border-radius: 8px;
   color: var(--foreground2);
   background: var(--eventransparent);
@@ -40,10 +32,6 @@ const Tag = styled(Link)`
   &:hover {
     color: var(--foreground0);
     background: var(--eventransparent1);
-    ${Count} {
-      color: var(--foreground0);
-      border-left: 1px solid var(--eventransparent);
-    }
   }
 `
 
@@ -56,7 +44,6 @@ const BlogTags = () => {
             ) {
                 group(field: frontmatter___tags) {
                     fieldValue
-                    totalCount
                 }
             }
         }
@@ -68,7 +55,6 @@ const BlogTags = () => {
             {data.allMarkdownRemark.group.map(tag => (
                 <Tag to={`/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue} activeStyle={{ color: "var(--bg)", background: "var(--foreground0)" }}>
                   {tag.fieldValue}
-                  <Count>{tag.totalCount}</Count>
                 </Tag>
             ))}
         </Tags>

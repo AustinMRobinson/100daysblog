@@ -8,6 +8,44 @@ import styled from '@emotion/styled'
 import Post from '../components/post'
 import BlogTags from '../components/blogtags'
 
+const Divider = styled.div`
+    width: 100%;
+    height: 1px;
+    background: var(--eventransparent);
+`
+
+const Title = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    h3 {
+        color: var(--foreground2);
+        background: var(--bg);
+        padding-right: .75rem;
+        margin: 0;
+        flex: 0 0 auto;
+    }
+    @media only screen and (max-width: 460px) {
+        margin: 0.5rem 0 2rem 0;
+        position: relative;
+        display: block;
+        h3 {
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+            z-index: 5;
+            max-width: 128px;
+            padding: 0;
+        }
+        ${Divider} {
+            margin-top: -.75rem;
+            position: relative;
+            width: 100%;
+            z-index: 3;
+        }
+    }
+`
+
 const BlogPosts = styled.div`
     margin-top: 3rem;
     padding: 2rem 0 1rem 0;
@@ -44,6 +82,10 @@ const Tags = ({ pageContext, data }) => {
     <Layout title={tag}>
       <Hero title="Blog Posts" subtitle={tagHeader}></Hero>
       <Container>
+        <Title>
+            <h3>Filter by Tag</h3>
+            <Divider />
+        </Title>
         <BlogTags></BlogTags>
         <BlogPosts>
           <Posts>
