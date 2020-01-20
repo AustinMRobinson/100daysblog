@@ -15,6 +15,12 @@ const RecentPosts = styled.div`
         margin: 0 0 0.5rem 0;
         font-size: 2.5rem;
     }
+    @media only screen and (max-width: 460px) {
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+        h2 {
+            font-size: 2rem;
+        }
+    }
 `
 
 const BlogPosts = styled.div`
@@ -32,7 +38,7 @@ const Posts = styled.div`
     grid-gap: 2rem;
     @media only screen and (max-width: 460px) {
         grid-template-columns: 1fr;
-        grid-gap: 4rem;
+        grid-gap: 2rem;
     }
 `
 

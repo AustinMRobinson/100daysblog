@@ -9,8 +9,10 @@ import Post from '../components/post'
 import BlogTags from '../components/blogtags'
 
 const BlogPosts = styled.div`
+    margin-top: 3rem;
     padding: 2rem 0 1rem 0;
     @media only screen and (max-width: 460px) {
+        margin-top: 1rem;
         padding-top: 1rem;
     }
 `
@@ -20,10 +22,13 @@ const Posts = styled.div`
     list-style-type: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 7%;
+    grid-gap: 4rem;
+    @media only screen and (max-width: 768px) {
+        grid-gap: 2rem;
+    }
     @media only screen and (max-width: 460px) {
         grid-template-columns: 1fr;
-        grid-gap: 4rem;
+        grid-gap: 3rem;
     }
 `
 
@@ -42,25 +47,25 @@ const Tags = ({ pageContext, data }) => {
         <BlogTags></BlogTags>
         <BlogPosts>
           <Posts>
-          {edges.map(({ node }) => {
-            const { slug } = node.fields
-            const { title } = node.frontmatter
-            const { date } = node.frontmatter
-            const { fluid } = node.frontmatter.thumbnail.childImageSharp
-            const { timeToRead } = node
-            const { excerpt } = node
-            return (
-              <Post 
-                to={slug} 
-                key={slug} 
-                title={title}
-                date={date}
-                fluid={fluid}
-                excerpt={excerpt}
-                read={timeToRead}
-                />
-            )
-          })}
+            {edges.map(({ node }) => {
+              const { slug } = node.fields
+              const { title } = node.frontmatter
+              const { date } = node.frontmatter
+              const { fluid } = node.frontmatter.thumbnail.childImageSharp
+              const { timeToRead } = node
+              const { excerpt } = node
+              return (
+                <Post 
+                  to={slug} 
+                  key={slug} 
+                  title={title}
+                  date={date}
+                  fluid={fluid}
+                  excerpt={excerpt}
+                  read={timeToRead}
+                  />
+              )
+            })}
           </Posts>
         </BlogPosts>
         {/*

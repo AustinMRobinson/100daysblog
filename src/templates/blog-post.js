@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import Container from '../components/container'
 import Hero from '../components/hero'
 import Img from 'gatsby-image'
+import kebabCase from "lodash/kebabCase"
 
 const BlogThumbnail = styled(Img)`
   width: 100%;
@@ -59,6 +60,32 @@ const BlogContent = styled.section`
   }
 `
 
+const Tags = styled.div`
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+`
+
+const Tag = styled(Link)`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: var(--foreground2);
+  background: var(--eventransparent);
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    color: var(--foreground0);
+    background: var(--eventransparent1);
+  }
+`
+
 const BlogPost = ({ data }) => {
 
     const { markdownRemark: post } = data
@@ -66,10 +93,14 @@ const BlogPost = ({ data }) => {
     return (
         <Layout title={post.frontmatter.title} description={post.excerpt}>
             <Hero title={post.frontmatter.title} subtitle={`${post.frontmatter.date} • ${post.timeToRead} min read`} width="640px"></Hero>
-            <Container>
+            <Container width="640px">
+              <Tags>
                 {post.frontmatter.tags.map(tag => (
-                <Link to={`/tags/${tag}/`}>{tag}</Link>
+                  <Tag to={`/tags/${kebabCase(tag)}/`}>{tag}</Tag>
                 ))}
+              </Tags>
+            </Container>
+            <Container>
               <BlogThumbnail fluid={post.frontmatter.thumbnail.childImageSharp.fluid} draggable="false"></BlogThumbnail>
             </Container>
             <BlogContent>

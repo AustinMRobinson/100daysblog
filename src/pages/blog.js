@@ -11,6 +11,7 @@ const BlogPosts = styled.div`
     margin-top: 3rem;
     padding: 2rem 0 1rem 0;
     @media only screen and (max-width: 460px) {
+        margin-top: 1rem;
         padding-top: 1rem;
     }
 `
@@ -21,9 +22,12 @@ const Posts = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 4rem;
+    @media only screen and (max-width: 768px) {
+        grid-gap: 2rem;
+    }
     @media only screen and (max-width: 460px) {
         grid-template-columns: 1fr;
-        grid-gap: 4rem;
+        grid-gap: 3rem;
     }
 `
 
@@ -32,7 +36,7 @@ const Blog = ({ data }) => {
 
     return (
         <Layout title="Blog Posts" description="A 100 Days of Gatsby Blog" image={data.site.siteMetadata.image}>
-            <Hero title="Blog Posts" subtitle="This is a collection of my 100 Days of Gatsby blog posts"/>
+            <Hero title="Blog Posts" subtitle="These are my 100 Days of Gatsby blog posts"/>
             <Container>
                 <BlogTags></BlogTags>
                 <BlogPosts>

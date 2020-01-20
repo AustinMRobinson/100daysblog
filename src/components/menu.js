@@ -73,7 +73,7 @@ const Menu = ({ open }) => {
     return (
       <StyledMenu open={open}>
         <NavMenuList>
-            <NavItem to="/">Blog</NavItem>
+            <NavItem to="/blog">Blog</NavItem>
             <NavItem to="/about">About</NavItem>
             <NavItem to="/contact">Contact Me</NavItem>
         </NavMenuList>

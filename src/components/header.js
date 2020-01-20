@@ -86,7 +86,7 @@ const Header = (props) => {
                 <nav>
                     <NavMain to="/">{data.site.siteMetadata.title}</NavMain>
                     <NavItems>
-                        <NavLink to="/">Blog</NavLink>
+                        <NavLink to="/blog">Blog</NavLink>
                         <NavLink to="/about">About</NavLink>
                         <NavLink to="/contact">Contact Me</NavLink>
                         <ModeToggle></ModeToggle>

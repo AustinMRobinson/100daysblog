@@ -1,6 +1,7 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+const _ = require("lodash")
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -64,7 +65,7 @@ const tags = result.data.tagsGroup.group
 // Make tag pages
 tags.forEach(tag => {
   createPage({
-    path: `/tags/${tag.fieldValue}/`,
+    path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
     component: tagTemplate,
     context: {
       tag: tag.fieldValue,

@@ -6,7 +6,12 @@ import kebabCase from "lodash/kebabCase"
 
 
 const Tags = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: .75rem;
+  @media only screen and (max-width: 460px) {
+    grid-template-columns: repeat(4, auto);
+}
 `
 
 const Count = styled.p`
@@ -18,7 +23,11 @@ const Count = styled.p`
 `
 
 const Tag = styled(Link)`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   font-size: 0.9rem;
   font-weight: 600;
@@ -26,7 +35,6 @@ const Tag = styled(Link)`
   border-radius: 8px;
   color: var(--foreground2);
   background: var(--eventransparent);
-  margin-right: 12px;
   text-decoration: none;
   transition: 0.3s all ease-in-out;
   &:hover {
