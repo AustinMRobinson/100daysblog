@@ -84,11 +84,11 @@ const Header = (props) => {
         <StyledHeader>
             <Container>
                 <nav>
-                    <NavMain to="/">{data.site.siteMetadata.title}</NavMain>
+                    <NavMain fade to="/">{data.site.siteMetadata.title}</NavMain>
                     <NavItems>
-                        <NavLink to="/blog">Blog</NavLink>
-                        <NavLink to="/about">About</NavLink>
-                        <NavLink to="/contact">Contact Me</NavLink>
+                        <NavLink fade to="/blog" activeStyle={{ color: "var(--foreground0)" }}>Blog</NavLink>
+                        <NavLink fade to="/about" activeStyle={{ color: "var(--foreground0)" }}>About</NavLink>
+                        <NavLink fade to="/contact" activeStyle={{ color: "var(--foreground0)" }}>Contact Me</NavLink>
                         <ModeToggle></ModeToggle>
                         <NavMenu ref={node}>
                             <Burger open={open} setOpen={setOpen} />
