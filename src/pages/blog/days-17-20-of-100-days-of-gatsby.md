@@ -22,6 +22,8 @@ I did a hybrid of what I wanted on the [/uses page](https://uses.tech/) from Wes
 
 To give some better distinction between the homepage and the new blog page, I limited the blog posts on the homepage to only the most recent 2, with a CTA button to see the rest of the blog posts. Eventually I will add more info about 100 Days of Gatsby on this homepage and spruce it up a bit more.
 
+![New homepage with a 'Recent Posts' section](/img/screen-shot-2020-01-20-at-9.00.58-pm.png "Updated homepage")
+
 # Closing
 
 Implementing these changes was pretty easy, which is a relief considering I couldn't really understand how Wes set up the filtering on the /uses page. As for my goals for the next batch of days, I'd like to:
