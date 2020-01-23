@@ -16,9 +16,12 @@
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
+    "algoliasearch": "^3.35.1",
     "babel-plugin-styled-components": "^1.10.6",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.37",
+    "gatsby-plugin-algolia": "^0.5.0",
     "gatsby-plugin-dark-mode": "^1.1.0",
     "gatsby-plugin-emotion": "^4.1.18",
     "gatsby-plugin-manifest": "^2.2.34",
@@ -41,6 +44,7 @@
     "react-dom": "^16.12.0",
     "react-floating-label-input": "^4.2.1",
     "react-helmet": "^5.2.1",
+    "react-instantsearch-dom": "^6.2.0",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
