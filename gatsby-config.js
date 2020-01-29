@@ -4,11 +4,11 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+// require('dotenv').config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
 
-const queries = require('./src/utils/algolia')
+// const queries = require('./src/utils/algolia')
 
 module.exports = {
   siteMetadata: {
@@ -21,16 +21,16 @@ module.exports = {
     image: `/static/img/sitethumb.jpg`,
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-algolia',
-      options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
-        apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY,
-        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-        queries,
-        chunkSize: 10000
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-algolia',
+    //   options: {
+    //     appId: process.env.GATSBY_ALGOLIA_APP_ID,
+    //     apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY,
+    //     indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
+    //     queries,
+    //     chunkSize: 10000
+    //   }
+    // },
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-sass`,
     {
