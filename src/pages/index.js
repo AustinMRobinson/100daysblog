@@ -6,7 +6,7 @@ import Hero from "../components/hero"
 import Container from '../components/container'
 import Post from '../components/post'
 import Button from '../components/button'
-
+// Needed for algolia search. Idk
 // const searchClient = algoliasearch('X6RG30IMBB', 'a8c1119740a225b4c7aa82c96deaf4d9');
 
 const RecentPosts = styled.div`
