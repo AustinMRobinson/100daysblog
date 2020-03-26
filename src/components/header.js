@@ -52,6 +52,9 @@ const NavLink = styled(Link)`
     margin-right: 2rem;
     color: var(--foreground2);
     transition: 0.3s all ease-in-out;
+    &.active {
+        color: var(--accent);
+    }
     &:hover {
         color: var(--foreground0);
     }
@@ -67,11 +70,11 @@ const Header = (props) => {
     const data = useStaticQuery(graphql`
         query {
             site {
-            siteMetadata {
-                title
-                author
-                avatar
-            }
+                siteMetadata {
+                    title
+                    author
+                    avatar
+                }
             }
         }
     `)
@@ -84,11 +87,11 @@ const Header = (props) => {
         <StyledHeader>
             <Container>
                 <nav>
-                    <NavMain fade to="/">{data.site.siteMetadata.title}</NavMain>
+                    <NavMain to="/">{data.site.siteMetadata.title}</NavMain>
                     <NavItems>
-                        <NavLink fade to="/blog" activeStyle={{ color: "var(--foreground0)" }}>Blog</NavLink>
-                        <NavLink fade to="/about" activeStyle={{ color: "var(--foreground0)" }}>About</NavLink>
-                        <NavLink fade to="/contact" activeStyle={{ color: "var(--foreground0)" }}>Contact Me</NavLink>
+                        <NavLink to="/blog" activeClassName='active'>Blog</NavLink>
+                        <NavLink to="/about" activeClassName='active'>About</NavLink>
+                        <NavLink to="/contact" activeClassName='active'>Contact Me</NavLink>
                         <ModeToggle></ModeToggle>
                         <NavMenu ref={node}>
                             <Burger open={open} setOpen={setOpen} />

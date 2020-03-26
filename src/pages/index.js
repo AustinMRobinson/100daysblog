@@ -6,10 +6,8 @@ import Hero from "../components/hero"
 import Container from '../components/container'
 import Post from '../components/post'
 import Button from '../components/button'
-// Needed for algolia search. Idk
-// const searchClient = algoliasearch('X6RG30IMBB', 'a8c1119740a225b4c7aa82c96deaf4d9');
 
-const RecentPosts = styled.div`
+const PostWrapper = styled.div`
     background: var(--transparentaccent2);
     padding: 3rem;
     border-radius: 1rem;
@@ -48,18 +46,26 @@ const SeeMore = styled.div`
     margin-top: 1rem;
 `
 
+const Spacer = styled.div`
+    width: 100%;
+    height: ${props => props.size === 'large' ? '4rem' : '2rem'};
+    @media only screen and (max-width: 460px) {
+        height: ${props => props.size === 'large' ? '2rem' : '1rem'};
+    }
+`
+
 
 const IndexPage = ({ data }) => {
 
     return (
-        <Layout title="Hello World!" description="A 100 Days of Gatsby Blog" image={data.site.siteMetadata.image}>
-            <Hero title="Hello World!" subtitle="This is a barebones #100DaysofGatsby blog created by Austin Robinson."/>
+        <Layout title="Hello World!" description="A development blog by Austin Robinson!" image={data.site.siteMetadata.image}>
+            <Hero title="Hello World!" subtitle="This is a barebones dev blog created by Austin Robinson, used to document my journey learning new things and growing as a developer!"/>
             <Container>
-                <RecentPosts>
+                <PostWrapper>
                     <h2>Recent Posts</h2>
                     <BlogPosts>
                         <Posts>
-                            {data.allMarkdownRemark.edges.map(({ node }) => (
+                            {data.recentPosts.edges.map(({ node }) => (
                                 <Post to={node.fields.slug} key={node.id} 
                                     fluid={node.frontmatter.thumbnail.childImageSharp.fluid} 
                                     title={node.frontmatter.title}
@@ -71,7 +77,25 @@ const IndexPage = ({ data }) => {
                     <SeeMore>
                         <Link to="/blog"><Button size="large">See all Posts</Button></Link>                
                     </SeeMore>
-                </RecentPosts>
+                </PostWrapper>
+                <Spacer size="large"/>
+                <PostWrapper>
+                    <h2>Gatsby Posts</h2>
+                    <BlogPosts>
+                        <Posts>
+                            {data.gatsbyPosts.edges.map(({ node }) => (
+                                <Post to={node.fields.slug} key={node.id} 
+                                    fluid={node.frontmatter.thumbnail.childImageSharp.fluid} 
+                                    title={node.frontmatter.title}
+                                    postinfo="none">
+                                </Post>
+                            ))}
+                        </Posts>
+                    </BlogPosts>
+                    <SeeMore>
+                        <Link to="/tags/gatsby"><Button size="large">See all Gatsby Posts</Button></Link>                
+                    </SeeMore>
+                </PostWrapper>
             </Container>
         </Layout>
     )
@@ -80,13 +104,13 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const query = graphql`
-  query {
+  query HomepageQuery {
     site {
         siteMetadata {
             image
         }
     }
-    allMarkdownRemark(
+    recentPosts: allMarkdownRemark(
         limit: 2
         sort: { fields: [frontmatter___date], order: DESC }
         filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
@@ -109,8 +133,32 @@ export const query = graphql`
           fields {
             slug
           }
-          timeToRead
-          excerpt
+        }
+      }
+    }
+    gatsbyPosts: allMarkdownRemark(
+        limit: 2
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: {frontmatter: {tags: {eq: "Gatsby"}, templateKey: {eq: "blog-post"}}}
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            thumbnail {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+          }
+          fields {
+            slug
+          }
         }
       }
     }

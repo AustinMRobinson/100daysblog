@@ -73,8 +73,8 @@ const Posts = styled.div`
 const Blog = ({ data }) => {
 
     return (
-        <Layout title="Blog Posts" description="A 100 Days of Gatsby Blog" image={data.site.siteMetadata.image}>
-            <Hero title="Blog Posts" subtitle="These are my 100 Days of Gatsby blog posts"/>
+        <Layout title="Blog Posts" description="A development blog by Austin Robinson!" image={data.site.siteMetadata.image}>
+            <Hero title="Blog Posts" subtitle="These are my blog posts"/>
             <Container>
                 <Title>
                     <h3>Filter by Tag</h3>

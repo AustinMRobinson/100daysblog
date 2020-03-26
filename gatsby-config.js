@@ -4,33 +4,17 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-// require('dotenv').config({
-//   path: `.env.${process.env.NODE_ENV}`,
-// })
-
-// const queries = require('./src/utils/algolia')
-
 module.exports = {
   siteMetadata: {
-    title: `#100DaysofGatsby`,
-    titleTemplate: "%s · 100 Days of Gatsby",
+    title: `Austin's Dev Blog`,
+    titleTemplate: "%s · Austin's Dev Blog",
     author: `Austin Robinson`,
-    description: `A blog detailing my experiences building in the 100 Days of Gatsby Challenge!`,
-    url: `https://100-days-of-gatsby.netlify.com/`,
+    description: `A blog detailing my experiences growing as a developer!`,
+    url: `https://austin-blog.netlify.com/`,
     avatar: `/static/img/profpic.jpg`,
     image: `/static/img/sitethumb.jpg`,
   },
   plugins: [
-    // {
-    //   resolve: 'gatsby-plugin-algolia',
-    //   options: {
-    //     appId: process.env.GATSBY_ALGOLIA_APP_ID,
-    //     apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY,
-    //     indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-    //     queries,
-    //     chunkSize: 10000
-    //   }
-    // },
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-sass`,
     {
@@ -97,4 +81,3 @@ module.exports = {
     },
   ]
 }
-
