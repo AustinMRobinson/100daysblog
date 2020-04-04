@@ -12,7 +12,7 @@ transition: 0.3s all ease-in-out;
 `
 
 const Excerpt = styled.p`
-color: var(--foreground1);
+color: var(--foreground2);
 transition: 0.3s all ease-in-out;
 margin: 0.5rem 0 2rem 0;
 @media only screen and (max-width: 768px) {
@@ -34,8 +34,8 @@ text-decoration: none;
 h3 {
     transition: 0.3s all ease-in-out;
     margin-bottom: 0.75rem;
-    font-size: 2rem;
-    line-height: 2.125rem;
+    font-size: ${props => props.size === 'small' ? '1.5rem' : '2rem'};
+    line-height: ${props => props.size === 'small' ? '1.75rem' : '2.125rem'}
 }
 &:hover {
     h3 {
@@ -49,7 +49,7 @@ h3 {
 
 const Post = (props) => {
     return (
-        <StyledPost to={props.to} key={props.key}>
+        <StyledPost to={props.to} key={props.key} size={props.size}>
             <Thumbnail fluid={props.fluid} draggable="false"></Thumbnail>
             <h3>{props.title}</h3>
             <Excerpt>{props.excerpt}</Excerpt>
