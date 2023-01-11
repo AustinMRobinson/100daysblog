@@ -32,7 +32,7 @@
     "gatsby-remark-images-medium-zoom": "^1.4.0",
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-source-filesystem": "^2.1.43",
-    "gatsby-transformer-remark": "^2.6.45",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.9",
     "netlify-cms-app": "^2.10.1",
     "node-sass": "^4.13.0",
